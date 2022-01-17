@@ -2,7 +2,9 @@
   "name": "shopify",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rachmink.github.io/Spacestagram/",
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -42,8 +44,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "homepage": "https://rachmink.github.io/Spacestagram/"
+    "gh-pages": "^3.2.3"
   }
   
 
