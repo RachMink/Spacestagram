@@ -11,7 +11,7 @@ import {
   Avatar,
   ResponsiveContext,
 } from 'grommet';
-import { FormClose, Menu, Domain, Clock, Linkedin, Github } from 'grommet-icons';
+import { FormClose, Menu, Domain, Linkedin, Github } from 'grommet-icons';
 import PostListPage from "./pages/PostsListPage"
 
 const theme = {

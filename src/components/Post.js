@@ -73,7 +73,7 @@ function Post({ post }) {
 
         <RWebShare
           data={{
-            text: "Share via",
+            text: "Here's a cool space photo I found! ",
             url: `${post.url}`,
             title: "Share via",
           }}
