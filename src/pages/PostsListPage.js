@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, Spinner } from "grommet";
+import { Grid, Box, Spinner, ResponsiveContext } from "grommet";
 import Post from "../components/Post";
 
 
@@ -35,20 +35,18 @@ class PostListPage extends React.Component {
       return < Spinner />;
     }
     return (
-      <Grid
-        rows={["xxxlarge"]}
-        columns={["large"]}
-        gap="small"
-        areas={[
-          { name: "main", start: [0, 0], end: [0, 0] },
-        ]}
-      >
-        <Box gridArea="main" round="xsmall" gap="medium">
-                       {this.state.posts.map((post) => {
-                  return <Post post={post} key={post.title} />;
-                })}
-        </Box>
-      </Grid>
+        <Grid
+          rows={["xxxlarge"]}
+          columns={["large"]}
+          gap="small"
+          areas={[{ name: "main", start: [0, 0], end: [0, 0] }]}
+        >
+          <Box gridArea="main" round="xsmall" gap="medium">
+            {this.state.posts.map((post) => {
+              return <Post post={post} key={post.title} />;
+            })}
+          </Box>
+        </Grid>
     );
   }
 }

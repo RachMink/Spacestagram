@@ -10,18 +10,6 @@ import {
 } from "grommet";
 import { Favorite, ShareRounded } from "grommet-icons";
 
-// const theme = {
-//   global: {
-//     colors:{
-//       red: '#FF0000'
-//     },
-//     like: {
-//       position: "absolute",
-//       font: "large",
-//     },
-//   },
-// };
-
 function Post({ post }) {
   const [color, setColor] = useState('plain');
 
@@ -29,7 +17,7 @@ function Post({ post }) {
      return color === 'plain' ? setColor('red') : setColor('plain');
   };
   return (
-    <Box round="xsmall" elevation="medium" overflow="auto">
+    <Box round="xsmall" elevation="medium" overflow="auto" full>
       <Box height="medium">
         <Image alt="NASA Image of the day" src={post.url} fit="cover" />
       </Box>

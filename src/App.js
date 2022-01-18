@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import {
   Box,
   Button,
@@ -48,11 +48,17 @@ class App extends Component {
   }
   render() {
     const { showSidebar } = this.state;
+    
     return (
       <Grommet theme={theme}>
         <ResponsiveContext.Consumer>
           {(size) => (
-            <Box fill>
+            <Box
+              overflow={{ horizontal: "auto" }}
+              width={size === "small" ? "200px" : "400px"}
+              fill
+              full
+            >
               <AppBar>
                 <Heading level="3" margin="none">
                   Welcome to Spacestagram Earthlings!
@@ -76,7 +82,6 @@ class App extends Component {
                   <Collapsible direction="horizontal" open={showSidebar}>
                     <Sidebar
                       background="brand"
-                      //round="small"
                       header={
                         <Avatar src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                       }
@@ -125,7 +130,6 @@ class App extends Component {
                     </Box>
                     <Sidebar
                       background="brand"
-                      //round="small"
                       header={
                         <Avatar src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80" />
                       }
@@ -140,7 +144,7 @@ class App extends Component {
                       <Nav gap="small">
                         <Button
                           icon={<Github />}
-                          target={'_blank'}
+                          target={"_blank"}
                           href={"https://github.com/RachMink"}
                           hoverIndicator
                         />
